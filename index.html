@@ -9,91 +9,161 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f8f9fa;
+      background: #fdf6f0;
       color: #333;
     }
+
     header {
-      background-color: #343a40;
+      background-color: #800000;
       color: white;
       padding: 2rem;
       text-align: center;
     }
+
     .container {
-      max-width: 800px;
+      max-width: 960px;
       margin: auto;
       padding: 2rem;
     }
+
     .profile {
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
     }
+
     .profile img {
       width: 150px;
       border-radius: 50%;
       margin-bottom: 1rem;
     }
+
+    .profile a {
+      color: #800000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .profile a:hover {
+      text-decoration: underline;
+    }
+
     nav {
       margin-top: 2rem;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
     }
+
     nav button {
       padding: 0.5rem 1rem;
-      background: #dee2e6;
+      background: #ddd0c8;
       border: none;
       border-radius: 5px;
       cursor: pointer;
     }
+
     nav button.active {
-      background: #adb5bd;
+      background: #bfa6a0;
     }
+
     section {
       display: none;
       margin-top: 1.5rem;
     }
+
     section.active {
       display: block;
+    }
+
+    .links {
+      margin-top: 1rem;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 0.5rem;
+      color: #800000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .cv-button {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #800000;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .publications {
+      margin-top: 1.5rem;
+    }
+
+    .publications li {
+      margin-bottom: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      .profile img {
+        width: 120px;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Conor Dyson</h1>
-    <p>Well! I'm a PhD student at the center of gravity (fromerly known as the strong group) at 
-    the Niels Bohr Institute at the Univeristy of Copenhagen.  </p>
+    <p>PhD Student | Center of Gravity, Niels Bohr Institute</p>
   </header>
 
   <div class="container">
     <div class="profile">
-      <img src="your-photo.jpg" alt="Your Name" />
-      <p>Hello! I'm [Your Name], a [Your Role or Title] based in [Your Location]. I'm passionate about [a few words about what you do or care about].</p>
+      <img src="PersonalPhoto1.jpg" alt="Conor Dyson" />
+      <p>Hello! I'm Conor Dyson, a theoretical physicist based in Copenhagen. I'm passionate about fundamental physics, critical thinking, and creative exploration in and out of academia.</p>
+      <p><strong>Contact:</strong> <a href="mailto:conor.dyson@nbi.ku.dk">conor.dyson@nbi.ku.dk</a></p>
     </div>
 
     <nav>
-      <button class="tab active" onclick="showTab('research')">Research Interests</button>
-      <button class="tab" onclick="showTab('pastimes')">Pastimes</button>
+      <button class="tab active" onclick="showTab('interests')">Interests</button>
+      <button class="tab" onclick="showTab('research')">Research</button>
+      <button class="tab" onclick="showTab('hobbies')">Hobbies</button>
     </nav>
 
-    <section id="research" class="active">
-      <h2>Research Interests</h2>
-      <p>Describe your current or past research projects, areas of academic interest, or topics you’re passionate about.</p>
+    <section id="interests" class="active">
+      <h2>Interests</h2>
+      <p>
+        I’m drawn to visual art, especially paintings that balance mood and mystery. Some current favorites include:
+      </p>
+      <ul>
+        <li>Caspar David Friedrich – <em>Wanderer above the Sea of Fog</em></li>
+        <li>Vilhelm Hammershøi – <em>Interior with Woman at Piano</em></li>
+        <li>Francis Bacon – <em>Study after Velázquez’s Portrait of Pope Innocent X</em></li>
+      </ul>
+
+      <p>Musically, I’ve been listening to a mix of new and old:</p>
+      <ul>
+        <li><strong>Fontaines D.C.</strong></li>
+        <li><strong>Arctic Monkeys</strong></li>
+        <li><strong>Lankum</strong></li>
+        <li><strong>Lisa O'Neill</strong></li>
+      </ul>
+
+      <p>
+        I’m also a lifelong rugby fan and player. (Hot take: <strong>Prendergast is overrated</strong> — Crowley is the clear choice at 10.)
+      </p>
     </section>
 
-    <section id="pastimes">
-      <h2>Pastimes</h2>
-      <p>Share a few things you enjoy doing in your free time—whether it's hiking, reading, painting, or gaming.</p>
-    </section>
-  </div>
-
-  <script>
-    function showTab(id) {
-      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-      document.querySelectorAll('button.tab').forEach(btn => btn.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-      event.currentTarget.classList.add('active');
-    }
-  </script>
-</body>
-</html>
+    <section id="research">
+      <h2>Research</h2>
+      <p>
+        My work focuses on gravitational self-force in both vacuum spacetimes and those with material environments. I aim to develop self-consistent models for the evolution of small bodies
