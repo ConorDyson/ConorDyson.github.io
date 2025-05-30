@@ -5,199 +5,214 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Conor Dyson | Personal Website</title>
   <style>
+    :root {
+      --green: #7bbf6a;
+      --green-light: #e7f6e3;
+      --text-dark: #2f3e2f;
+      --background: #ffffff;
+      --highlight: #cce8cc;
+    }
+
+    * {
+      box-sizing: border-box;
+      border-radius: 12px;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #fdf6f0;
-      color: #333;
+      font-family: "Segoe UI", sans-serif;
+      background-color: var(--background);
+      color: var(--text-dark);
+      display: flex;
+      min-height: 100vh;
     }
 
-    header {
-      background-color: #800000;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      position: sticky;
+    .sidebar {
+      position: fixed;
       top: 0;
-      z-index: 1000;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    .profile {
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: var(--green);
+      color: white;
       display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 2rem;
-      text-align: left;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 1rem;
     }
 
-    .profile img {
-      width: 250px;
-      height: 250px;
+    .sidebar img {
+      width: 140px;
+      height: 140px;
       object-fit: cover;
-      flex-shrink: 0;
+      margin-bottom: 1rem;
     }
 
-    .profile a {
-      color: #800000;
-      text-decoration: none;
-      font-weight: bold;
+    .sidebar h1 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      text-align: center;
     }
 
-    .profile a:hover {
-      text-decoration: underline;
-    }
-
-    nav {
-      margin-top: 2rem;
+    .nav-links {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
+      flex-direction: column;
+      gap: 0.8rem;
+      width: 100%;
+      margin-top: 2rem;
     }
 
-    nav button {
-      padding: 0.5rem 1rem;
-      background: #ddd0c8;
+    .nav-links button {
+      background: var(--green-light);
       border: none;
-      border-radius: 5px;
+      color: var(--text-dark);
+      font-size: 1rem;
       cursor: pointer;
+      text-align: left;
+      padding: 0.6rem 1rem;
+      transition: background 0.3s;
     }
 
-    nav button.active {
-      background: #bfa6a0;
+    .nav-links button:hover,
+    .nav-links button.active {
+      background-color: var(--highlight);
+    }
+
+    .main-content {
+      margin-left: 270px;
+      padding: 2rem;
+      flex: 1;
     }
 
     section {
       display: none;
-      margin-top: 1.5rem;
     }
 
     section.active {
       display: block;
     }
 
-    .links {
-      margin-top: 1rem;
-    }
-
     .links a {
       display: inline-block;
-      margin: 0.5rem;
-      color: #800000;
+      margin: 0.5rem 1rem 0.5rem 0;
+      color: var(--green);
       text-decoration: none;
       font-weight: bold;
     }
 
     .cv-button {
-      margin-top: 1rem;
       display: inline-block;
+      margin-top: 1rem;
       padding: 0.5rem 1rem;
-      background-color: #800000;
+      background-color: var(--green);
       color: white;
-      border-radius: 5px;
       text-decoration: none;
     }
 
-    .publications {
-      margin-top: 1.5rem;
+    .publications ul {
+      list-style-type: none;
+      padding-left: 0;
     }
 
     .publications li {
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
     }
 
     @media (max-width: 768px) {
-      .profile {
+      body {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
       }
 
-      .profile img {
-        width: 180px;
-        height: 180px;
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
       }
 
-      nav {
-        flex-direction: column;
-        align-items: center;
+      .sidebar img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 0;
+      }
+
+      .nav-links {
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>
+  <div class="sidebar">
+    <img src="PersonalPhoto1.jpg" alt="Conor Dyson" />
     <h1>Conor Dyson</h1>
-    <p>PhD Student | Center of Gravity, Niels Bohr Institute</p>
-  </header>
-
-  <div class="container">
-    <div class="profile">
-      <div class="bio">
-        <p>Well! I'm Conor Dyson, originally from Poulacapple East on the border of Tipperary and Kilkenny, Ireland. I’m now based in Copenhagen, Denmark, where I pursue my PhD at the Niels Bohr Institute, University of Copenhagen. I’m supervised by Maarten van de Meent and Vitor Cardoso. My primary research interest is in post-adiabatic gravitational self-force for modeling intermediate and extreme mass-ratio inspirals. I'm particularly focused on binary black hole systems — not only in vacuum but also in the presence of environments. Outside of physics, I spend most of my free time playing rugby with CSR Nanok in Christianshavn, listening to and playing music, and enjoying a few beers with friends under the Copenhagen sun.</p>
-        <p><strong>Contact:</strong> <a href="mailto:conor.dyson@nbi.ku.dk">conor.dyson@nbi.ku.dk</a></p>
-      </div>
-      <img src="PersonalPhoto1.jpg" alt="Conor Dyson" />
-    </div>
-
-    <nav>
-      <button class="tab" onclick="showTab(event, 'interests')">Interests</button>
+    <div class="nav-links">
+      <button class="tab" onclick="showTab(event, 'home')">Home</button>
+      <button class="tab" onclick="showTab(event, 'about')">About</button>
       <button class="tab active" onclick="showTab(event, 'research')">Research</button>
-      <button class="tab" onclick="showTab(event, 'hobbies')">Hobbies</button>
-    </nav>
+    </div>
+  </div>
 
-    <section id="interests">
-      <h2>Interests</h2>
-      <p>I love spending an hour wandering around the Statens Museum for Kunst when I've a small amount of free time. Some current favorite art pieces include:</p>
+  <div class="main-content">
+    <section id="home">
+      <h2>Home</h2>
+      <p>
+        Well! I'm Conor Dyson, originally from Poulacapple East on the border of Tipperary and Kilkenny, Ireland. I’m now based in Copenhagen, Denmark, where I pursue my PhD at the Niels Bohr Institute, University of Copenhagen. I’m supervised by Maarten van de Meent and Vitor Cardoso. My primary research interest is in post-adiabatic gravitational self-force for modeling intermediate and extreme mass-ratio inspirals. I'm particularly focused on binary black hole systems — not only in vacuum but also in the presence of environments. Outside of physics, I spend most of my free time playing rugby with CSR Nanok in Christianshavn, listening to and playing music, and enjoying a few beers with friends under the Copenhagen sun.
+      </p>
+      <p><strong>Contact:</strong> <a href="mailto:conor.dyson@nbi.ku.dk">conor.dyson@nbi.ku.dk</a></p>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I love spending an hour wandering around the Statens Museum for Kunst when I've a small amount of free time. Generally, some current favorite art pieces include:
+      </p>
       <ul>
-        <li>Carl Bloch — <em>In a Roman Osteria</em></li>
-        <li>Jan Matejko — <em>Stańczyk</em></li>
-        <li>Caspar David Friedrich — <em>Wanderer above the Sea of Fog</em></li>
+        <li>Carl Bloch – <em>In a Roman Osteria</em></li>
+        <li>Jan Matejko – <em>Stańczyk</em></li>
+        <li>Caspar David Friedrich – <em>Wanderer above the Sea of Fog</em></li>
       </ul>
-      <p>Musically, I listen to a mix of new and old. Some favorite artists and songs:</p>
+
+      <p>Musically, I listen to a mix of new and old. Some of my longtime favorite artists and songs have been:</p>
       <ul>
-        <li><strong>Fontaines D.C.</strong> – "Bug"</li>
+        <li><strong>Fontaines D.C.</strong> – "Big"</li>
         <li><strong>Arctic Monkeys</strong> – "Do I Wanna Know?"</li>
         <li><strong>Lisa O'Neill</strong> – "All the Tired Horses"</li>
         <li><strong>Hak Baker</strong> – "Windrush Baby"</li>
       </ul>
-      <p>I love playing and watching rugby. Growing up on the border of Munster and Leinster, I got to choose my club — and given my hot take that <strong>Prendergast is overrated</strong> and Crowley is the clear choice at 10, you can probably guess which route I took. I play for <a href="https://www.csrnanok.dk/" target="_blank">CSR Nanok</a> in Christianhavn, Copenhagen.</p>
     </section>
 
     <section id="research" class="active">
       <h2>Research</h2>
-      <p>My work focuses on gravitational self-force in both vacuum spacetimes and those with material environments. I aim to develop self-consistent models for the evolution of small bodies in curved spacetimes, with an eye toward physical interpretation and numerical tractability.</p>
+      <p>
+        My work focuses on gravitational self-force in both vacuum spacetimes and those with material environments. I aim to develop self-consistent models for the evolution of small bodies in curved spacetimes, with an eye toward physical interpretation and numerical tractability.
+      </p>
+
       <div class="links">
         <a href="https://inspirehep.net/authors/2156415?ui-citation-summary=true" target="_blank">INSPIRE Profile</a>
         <a href="https://ui.adsabs.harvard.edu/search/p_=0&q=author%3A%22Dyson%2C%20Conor%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank">ADS Profile</a>
         <a href="https://strong-gr.com/" target="_blank">Strong Gravity Group</a>
       </div>
+
       <a class="cv-button" href="ConorDyson_CV.pdf" target="_blank">Download CV</a>
+
       <div class="publications">
         <h3>Featured Publications</h3>
         <ul>
-          <li><strong>[1]</strong> C. Dyson, T. Spieksma, R. Brito, M. v.d. Meent and S. Dolan — <em>Environmental effects in extreme mass ratio inspirals: perturbations to the environment in Kerr #1</em>. PRL. [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.211403">link</a>]</li>
-          <li><strong>[2]</strong> C. Dyson, J. Redondo-Yuste, M. v.d. Meent, V. Cardoso — <em>Relativistic Aerodynamics of Spinning Black Holes #2</em>. PRD, 2024. [<a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.109.104038">link</a>]</li>
-          <li><strong>[3]</strong> C. Dyson, M. v.d. Meent — <em>Analytic solutions to plunging geodesics in Kerr #3</em>. CQG, 2023. [<a href="https://iopscience.iop.org/article/10.1088/1361-6382/acf552">link</a>]</li>
+          <li><strong>[1]</strong> Dyson, Spieksma, Brito, van de Meent, Dolan. <em>Environmental effects in extreme mass ratio inspirals: perturbations to the environment in Kerr</em>. PRL. [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.211403">link</a>]</li>
+          <li><strong>[2]</strong> Dyson, Redondo-Yuste, van de Meent, Cardoso. <em>Relativistic Aerodynamics of Spinning Black Holes</em>. PRD, 2024. [<a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.109.104038">link</a>]</li>
+          <li><strong>[3]</strong> Dyson, van de Meent. <em>Analytic solutions to plunging geodesics in Kerr</em>. CQG, 2023. [<a href="https://iopscience.iop.org/article/10.1088/1361-6382/acf552">link</a>]</li>
         </ul>
       </div>
-    </section>
-
-    <section id="hobbies">
-      <h2>Hobbies</h2>
-      <p>In my free time, I enjoy:</p>
-      <ul>
-        <li>Playing the concertina</li>
-        <li>Watching and playing rugby</li>
-        <li>Having a couple of pints in the sun — ideally somewhere in Copenhagen</li>
-      </ul>
     </section>
   </div>
 
