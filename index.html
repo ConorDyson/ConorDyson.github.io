@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name | Personal Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background-color: #343a40;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    nav {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    nav button {
+      padding: 0.5rem 1rem;
+      background: #dee2e6;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    nav button.active {
+      background: #adb5bd;
+    }
+    section {
+      display: none;
+      margin-top: 1.5rem;
+    }
+    section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your Name</h1>
+    <p>Welcome to my personal website!</p>
+  </header>
+
+  <div class="container">
+    <div class="profile">
+      <img src="your-photo.jpg" alt="Your Name" />
+      <p>Hello! I'm [Your Name], a [Your Role or Title] based in [Your Location]. I'm passionate about [a few words about what you do or care about].</p>
+    </div>
+
+    <nav>
+      <button class="tab active" onclick="showTab('research')">Research Interests</button>
+      <button class="tab" onclick="showTab('pastimes')">Pastimes</button>
+    </nav>
+
+    <section id="research" class="active">
+      <h2>Research Interests</h2>
+      <p>Describe your current or past research projects, areas of academic interest, or topics you’re passionate about.</p>
+    </section>
+
+    <section id="pastimes">
+      <h2>Pastimes</h2>
+      <p>Share a few things you enjoy doing in your free time—whether it's hiking, reading, painting, or gaming.</p>
+    </section>
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('button.tab').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>
