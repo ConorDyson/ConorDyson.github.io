@@ -34,8 +34,9 @@
     }
 
     .profile img {
-      width: 150px;
-      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
       margin-bottom: 1rem;
     }
 
@@ -51,119 +52,3 @@
 
     nav {
       margin-top: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    nav button {
-      padding: 0.5rem 1rem;
-      background: #ddd0c8;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    nav button.active {
-      background: #bfa6a0;
-    }
-
-    section {
-      display: none;
-      margin-top: 1.5rem;
-    }
-
-    section.active {
-      display: block;
-    }
-
-    .links {
-      margin-top: 1rem;
-    }
-
-    .links a {
-      display: inline-block;
-      margin: 0.5rem;
-      color: #800000;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .cv-button {
-      margin-top: 1rem;
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background-color: #800000;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-
-    .publications {
-      margin-top: 1.5rem;
-    }
-
-    .publications li {
-      margin-bottom: 0.8rem;
-    }
-
-    @media (max-width: 600px) {
-      .profile img {
-        width: 120px;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Conor Dyson</h1>
-    <p>PhD Student | Center of Gravity, Niels Bohr Institute</p>
-  </header>
-
-  <div class="container">
-    <div class="profile">
-      <img src="PersonalPhoto1.jpg" alt="Conor Dyson" />
-      <p>Hello! I'm Conor Dyson, a theoretical physicist based in Copenhagen. I'm passionate about fundamental physics, critical thinking, and creative exploration in and out of academia.</p>
-      <p><strong>Contact:</strong> <a href="mailto:conor.dyson@nbi.ku.dk">conor.dyson@nbi.ku.dk</a></p>
-    </div>
-
-    <nav>
-      <button class="tab active" onclick="showTab('interests')">Interests</button>
-      <button class="tab" onclick="showTab('research')">Research</button>
-      <button class="tab" onclick="showTab('hobbies')">Hobbies</button>
-    </nav>
-
-    <section id="interests" class="active">
-      <h2>Interests</h2>
-      <p>
-        I’m drawn to visual art, especially paintings that balance mood and mystery. Some current favorites include:
-      </p>
-      <ul>
-        <li>Caspar David Friedrich – <em>Wanderer above the Sea of Fog</em></li>
-        <li>Vilhelm Hammershøi – <em>Interior with Woman at Piano</em></li>
-        <li>Francis Bacon – <em>Study after Velázquez’s Portrait of Pope Innocent X</em></li>
-      </ul>
-
-      <p>Musically, I’ve been listening to a mix of new and old:</p>
-      <ul>
-        <li><strong>Fontaines D.C.</strong></li>
-        <li><strong>Arctic Monkeys</strong></li>
-        <li><strong>Lankum</strong></li>
-        <li><strong>Lisa O'Neill</strong></li>
-      </ul>
-
-      <p>
-        I’m also a lifelong rugby fan and player. (Hot take: <strong>Prendergast is overrated</strong> — Crowley is the clear choice at 10.)
-      </p>
-    </section>
-
-    <section id="research">
-      <h2>Research</h2>
-      <p>
-        My work focuses on gravitational self-force in both vacuum spacetimes and those with material environments. I aim to develop self-consistent models for the evolution of small bodies
