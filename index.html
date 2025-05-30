@@ -52,3 +52,161 @@
 
     nav {
       margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav button {
+      padding: 0.5rem 1rem;
+      background: #ddd0c8;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    nav button.active {
+      background: #bfa6a0;
+    }
+
+    section {
+      display: none;
+      margin-top: 1.5rem;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .links {
+      margin-top: 1rem;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 0.5rem;
+      color: #800000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .cv-button {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #800000;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .publications {
+      margin-top: 1.5rem;
+    }
+
+    .publications li {
+      margin-bottom: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      .profile img {
+        width: 180px;
+        height: 180px;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Conor Dyson</h1>
+    <p>PhD Student | Center of Gravity, Niels Bohr Institute</p>
+  </header>
+
+  <div class="container">
+    <div class="profile">
+      <img src="PersonalPhoto1.jpg" alt="Conor Dyson" />
+      <p>Well! I'm Conor Dyson, a PhD Student origionaly from the border of Tipperary and Kilkenny, Ireland, now based in Copenhagen. I am pursuing a PhD at the Niels Bohr Institute, University of Copenhagen where I am supervised by Maarten van de Meent and Vitor Cardoso. My primary interests are in post-adiabatic gravitational self-force for modeling intermediary and extreme mass ratio inspirals. Beyond modeling binary black holes in the purely gravitational case, my interest in these systems also extends to modeling these systems in the presence of environments. Beyond physics I a spend the majority of my free time playing rugby at the CSR Nanok rugbyclub in Christianhavn, listening to and playing music and general enjoying a few beers and spending time with friend in Sunny Copenhagen. </p>
+      <p><strong>Contact:</strong> <a href="mailto:conor.dyson@nbi.ku.dk">conor.dyson@nbi.ku.dk</a></p>
+    </div>
+
+    <nav>
+      <button class="tab" onclick="showTab(event, 'interests')">Interests</button>
+      <button class="tab active" onclick="showTab(event, 'research')">Research</button>
+      <button class="tab" onclick="showTab(event, 'hobbies')">Hobbies</button>
+    </nav>
+
+    <section id="interests">
+      <h2>Interests</h2>
+      <p>
+        I love spending an hour wandering around the Statens Museum for Kunst when I've a small amout of freetime. Gnerally some current favorites art pieces include:
+      </p>
+      <ul>
+         <li>Carl Bloch<em>In a Roman Osteria</em></li>
+        <li>Jan Matejko<em>Stańczyk</em></li>
+        <li>Caspar David Friedrich<em>Wanderer above the Sea of Fog</em></li>
+      </ul>
+
+     <p>Musically, I listen to a mix of new and old, some of my longtime favorite arists and songs have been:</p>
+<ul>
+  <li><strong>Fontaines D.C.</strong> – "Bug"</li>
+  <li><strong>Arctic Monkeys</strong> – "Do I Wanna Know?"</li>
+  <li><strong>Lisa O'Neill</strong> – "All the Tired Horses"</li>
+  <li><strong>Lisa O'Neill</strong> – "All the Tired Horses"</li>
+</ul>
+
+      <p>
+        I love playing and watching rugby, growing up on the border of Munster and Leinster I got to choose my club, given my hottake is that, <strong>Prendergast is overrated</strong>, Crowley is the clear choice at 10 you can probabt guess which route I took. I play for <a href="https://www.csrnanok.dk/" target="_blank">CSR Nanok</a> in Christianhavn, Copenhagen. Joining and playing for this club has honestly been one of the great joys of my time in Copenhagen.
+      </p>
+    </section>
+
+    <section id="research" class="active">
+      <h2>Research</h2>
+      <p>
+        My work focuses on gravitational self-force in both vacuum spacetimes and those with material environments. I aim to develop self-consistent models for the evolution of small bodies in curved spacetimes, with an eye toward physical interpretation and numerical tractability.
+      </p>
+
+      <div class="links">
+        <a href="https://inspirehep.net/authors/2156415?ui-citation-summary=true" target="_blank">INSPIRE Profile</a>
+        <a href="https://ui.adsabs.harvard.edu/search/p_=0&q=author%3A%22Dyson%2C%20Conor%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank">ADS Profile</a>
+        <a href="https://strong-gr.com/" target="_blank">Strong Gravity Group</a>
+      </div>
+
+      <a class="cv-button" href="ConorDyson_CV.pdf" target="_blank">Download CV</a>
+
+      <div class="publications">
+        <h3>Featured Publications</h3>
+        <ul>
+          <li><strong>[1]</strong> Dyson, C. et al. <em>Title of Key Paper #1</em>. Journal Name, Year. [<a href="#">link</a>]</li>
+          <li><strong>[2]</strong> Dyson, C. <em>Title of Key Paper #2</em>. Journal Name, Year. [<a href="#">link</a>]</li>
+          <li><strong>[3]</strong> Dyson, C. et al. <em>Title of Key Paper #3</em>. Journal Name, Year. [<a href="#">link</a>]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="hobbies">
+      <h2>Hobbies</h2>
+      <p>In my free time, I enjoy:</p>
+      <ul>
+        <li>Playing the concertina</li>
+        <li>Watching and playing rugby</li>
+        <li>Having a couple of pints in the sun — ideally somewhere in Copenhagen</li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+    function showTab(event, id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('button.tab').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>
