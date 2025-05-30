@@ -18,6 +18,9 @@
       color: white;
       padding: 2rem;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .container {
@@ -28,16 +31,17 @@
 
     .profile {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+      text-align: left;
     }
 
     .profile img {
       width: 250px;
       height: 250px;
       object-fit: cover;
-      margin-bottom: 1rem;
+      flex-shrink: 0;
     }
 
     .profile a {
@@ -109,7 +113,13 @@
       margin-bottom: 0.8rem;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
       .profile img {
         width: 180px;
         height: 180px;
@@ -128,21 +138,14 @@
     <p>PhD Student | Center of Gravity, Niels Bohr Institute</p>
   </header>
 
-<div class="container">
-  <div class="profile">
-    <img src="PersonalPhoto1.jpg" alt="Conor Dyson" />
-    <p>
-      Well! I'm Conor Dyson, originally from Poulacapple East on the border of Tipperary and Kilkenny, Ireland. I’m now based in Copenhagen, Denmark, where I pursue my PhD at the Niels Bohr Institute, University of Copenhagen. I’m supervised by Maarten van de Meent and Vitor Cardoso.
-    </p>
-    <p>
-      My primary research interest is in post-adiabatic gravitational self-force for modeling intermediate and extreme mass-ratio inspirals. I'm particularly focused on binary black hole systems — not only in vacuum but also in the presence of environments.
-    </p>
-    <p>
-      Outside of physics, I spend most of my free time playing rugby with CSR Nanok in Christianshavn, listening to and playing music, and enjoying a few beers with friends under the Copenhagen sun.
-    </p>
-    <p><strong>Contact:</strong> <a href="mailto:conor.dyson@nbi.ku.dk">conor.dyson@nbi.ku.dk</a></p>
-  </div>
-</div>
+  <div class="container">
+    <div class="profile">
+      <div class="bio">
+        <p>Well! I'm Conor Dyson, originally from Poulacapple East on the border of Tipperary and Kilkenny, Ireland. I’m now based in Copenhagen, Denmark, where I pursue my PhD at the Niels Bohr Institute, University of Copenhagen. I’m supervised by Maarten van de Meent and Vitor Cardoso. My primary research interest is in post-adiabatic gravitational self-force for modeling intermediate and extreme mass-ratio inspirals. I'm particularly focused on binary black hole systems — not only in vacuum but also in the presence of environments. Outside of physics, I spend most of my free time playing rugby with CSR Nanok in Christianshavn, listening to and playing music, and enjoying a few beers with friends under the Copenhagen sun.</p>
+        <p><strong>Contact:</strong> <a href="mailto:conor.dyson@nbi.ku.dk">conor.dyson@nbi.ku.dk</a></p>
+      </div>
+      <img src="PersonalPhoto1.jpg" alt="Conor Dyson" />
+    </div>
 
     <nav>
       <button class="tab" onclick="showTab(event, 'interests')">Interests</button>
@@ -152,48 +155,37 @@
 
     <section id="interests">
       <h2>Interests</h2>
-      <p>
-        I love spending an hour wandering around the Statens Museum for Kunst when I've a small amout of freetime. Gnerally some current favorites art pieces include:
-      </p>
+      <p>I love spending an hour wandering around the Statens Museum for Kunst when I've a small amount of free time. Some current favorite art pieces include:</p>
       <ul>
-         <li>Carl Bloch<em>In a Roman Osteria</em></li>
-        <li>Jan Matejko<em>Stańczyk</em></li>
-        <li>Caspar David Friedrich<em>Wanderer above the Sea of Fog</em></li>
+        <li>Carl Bloch — <em>In a Roman Osteria</em></li>
+        <li>Jan Matejko — <em>Stańczyk</em></li>
+        <li>Caspar David Friedrich — <em>Wanderer above the Sea of Fog</em></li>
       </ul>
-
-     <p>Musically, I listen to a mix of new and old, some of my longtime favorite arists and songs have been:</p>
-<ul>
-  <li><strong>Fontaines D.C.</strong> – "Bug"</li>
-  <li><strong>Arctic Monkeys</strong> – "Do I Wanna Know?"</li>
-  <li><strong>Lisa O'Neill</strong> – "All the Tired Horses"</li>
-  <li><strong>Lisa O'Neill</strong> – "All the Tired Horses"</li>
-</ul>
-
-      <p>
-        I love playing and watching rugby, growing up on the border of Munster and Leinster I got to choose my club, given my hottake is that, <strong>Prendergast is overrated</strong>, Crowley is the clear choice at 10 you can probabt guess which route I took. I play for <a href="https://www.csrnanok.dk/" target="_blank">CSR Nanok</a> in Christianhavn, Copenhagen. Joining and playing for this club has honestly been one of the great joys of my time in Copenhagen.
-      </p>
+      <p>Musically, I listen to a mix of new and old. Some favorite artists and songs:</p>
+      <ul>
+        <li><strong>Fontaines D.C.</strong> – "Bug"</li>
+        <li><strong>Arctic Monkeys</strong> – "Do I Wanna Know?"</li>
+        <li><strong>Lisa O'Neill</strong> – "All the Tired Horses"</li>
+        <li><strong>Hak Baker</strong> – "Windrush Baby"</li>
+      </ul>
+      <p>I love playing and watching rugby. Growing up on the border of Munster and Leinster, I got to choose my club — and given my hot take that <strong>Prendergast is overrated</strong> and Crowley is the clear choice at 10, you can probably guess which route I took. I play for <a href="https://www.csrnanok.dk/" target="_blank">CSR Nanok</a> in Christianhavn, Copenhagen.</p>
     </section>
 
     <section id="research" class="active">
       <h2>Research</h2>
-      <p>
-        My work focuses on gravitational self-force in both vacuum spacetimes and those with material environments. I aim to develop self-consistent models for the evolution of small bodies in curved spacetimes, with an eye toward physical interpretation and numerical tractability.
-      </p>
-
+      <p>My work focuses on gravitational self-force in both vacuum spacetimes and those with material environments. I aim to develop self-consistent models for the evolution of small bodies in curved spacetimes, with an eye toward physical interpretation and numerical tractability.</p>
       <div class="links">
         <a href="https://inspirehep.net/authors/2156415?ui-citation-summary=true" target="_blank">INSPIRE Profile</a>
         <a href="https://ui.adsabs.harvard.edu/search/p_=0&q=author%3A%22Dyson%2C%20Conor%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank">ADS Profile</a>
         <a href="https://strong-gr.com/" target="_blank">Strong Gravity Group</a>
       </div>
-
       <a class="cv-button" href="ConorDyson_CV.pdf" target="_blank">Download CV</a>
-
       <div class="publications">
         <h3>Featured Publications</h3>
         <ul>
-          <li><strong>[1]</strong> C.Dyson, T.Spieksma, R.Brito, M.v.d.Meent and S.Dolan <em>Environmental effects in extreme mass ratio inspirals: perturbations to the environment in Kerr #1</em>. Physics Review Letters, Year. [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.211403">link</a>]</li>
-          <li><strong>[2]</strong> C.Dyson, J.Redondo-Yuste, M.v.d.Meent, V.Cardoso  <em> Relativistic Aerodynamics of Spinning Black Holes #2</em>. Physics Review D, 2024. [<a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.109.104038">link</a>]</li>
-          <li><strong>[3]</strong> C.Dyson, M.v.d.Meent <em>Analytic solutions to plunging geodesics in Ker #3</em>. Classical and Quantum Gravity, 2023. [<a href="https://iopscience.iop.org/article/10.1088/1361-6382/acf552">link</a>]</li>
+          <li><strong>[1]</strong> C. Dyson, T. Spieksma, R. Brito, M. v.d. Meent and S. Dolan — <em>Environmental effects in extreme mass ratio inspirals: perturbations to the environment in Kerr #1</em>. PRL. [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.211403">link</a>]</li>
+          <li><strong>[2]</strong> C. Dyson, J. Redondo-Yuste, M. v.d. Meent, V. Cardoso — <em>Relativistic Aerodynamics of Spinning Black Holes #2</em>. PRD, 2024. [<a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.109.104038">link</a>]</li>
+          <li><strong>[3]</strong> C. Dyson, M. v.d. Meent — <em>Analytic solutions to plunging geodesics in Kerr #3</em>. CQG, 2023. [<a href="https://iopscience.iop.org/article/10.1088/1361-6382/acf552">link</a>]</li>
         </ul>
       </div>
     </section>
