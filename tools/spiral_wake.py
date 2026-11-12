@@ -1,5 +1,6 @@
-"""Hero image for the site (assets/spiral-wake.svg): run `python tools/spiral_wake.py 0.25 24 3.8 0.25`
-and copy /tmp/spiral/spiral.svg to assets/spiral-wake.svg.
+"""Hero image for the site: run
+    python tools/spiral_wake.py 0.25 24 3.8 0.25 assets/spiral-wake.svg
+(arguments: disc aspect ratio h, number of grooves, groove bump amplitude, crest threshold, output file).
 
 Spiral density wake of a body on a circular equatorial orbit around a Kerr black hole,
 drawn as perturbed 'record grooves' (rings) in SVG.
@@ -31,6 +32,7 @@ phi = np.linspace(0, 2 * np.pi, 1441)
 paths = []
 crests = []
 CREST = float(sys.argv[4]) if len(sys.argv) > 4 else 0.35
+OUT = sys.argv[5] if len(sys.argv) > 5 else 'spiral-wake.svg'
 for r in rings:
     pw = wake_phi(r)
     d = (phi - pw + np.pi) % (2 * np.pi) - np.pi
@@ -61,10 +63,14 @@ for p, cs in zip(reversed(paths), reversed(crests)):   # outer first, so each in
     svg.append(f'<path d="{p}" fill="#5e1120" stroke="#f1e4d6" stroke-width="1.6" stroke-linejoin="round"/>')
     for c in cs:
         svg.append(f'<path d="{c}" fill="none" stroke="#f1e4d6" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"/>')
-svg.append(f'<circle cx="{C}" cy="{C}" r="44" fill="#120c0e"/>')
-svg.append(f'<circle cx="{C}" cy="{C}" r="52" fill="none" stroke="#f1e4d6" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>')
+# record label, with the black hole as the spindle hole
+svg.append(f'<circle cx="{C}" cy="{C}" r="62" fill="#f1e4d6"/>')
+svg.append(f'<circle cx="{C}" cy="{C}" r="56" fill="none" stroke="#5e1120" stroke-width="1"/>')
+svg.append(f'<text x="{C}" y="{C - 19}" text-anchor="middle" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="800" font-size="11" textLength="78" lengthAdjust="spacingAndGlyphs" fill="#5e1120">SPIRAL DENSITY WAVES</text>')
+svg.append(f'<text x="{C}" y="{C + 31}" text-anchor="middle" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="800" font-size="10" textLength="50" lengthAdjust="spacingAndGlyphs" fill="#5e1120">KERR, a = 0.7</text>')
+svg.append(f'<circle cx="{C}" cy="{C}" r="11" fill="#1a1013"/>')
 px, py = C + scale(rp) , C
 svg.append(f'<circle cx="{px:.1f}" cy="{py:.1f}" r="11" fill="#5e1120" stroke="#f1e4d6" stroke-width="2.4"/>')
 svg.append('</svg>')
-__import__('os').makedirs('/tmp/spiral', exist_ok=True); open(f'/tmp/spiral/spiral.svg', 'w').write('\n'.join(svg))
+open(OUT, 'w').write('\n'.join(svg))
 print('wake phi at r=4,8,20,40:', [round(float(wake_phi(r)), 2) for r in (4, 8, 20, 40)])
