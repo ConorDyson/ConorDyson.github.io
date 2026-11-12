@@ -1,256 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Conor Dyson | Personal Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fdf6f0;
-      color: #333;
-    }
-
-    header {
-      background-color: #800000;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    .profile {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 2rem;
-      text-align: left;
-    }
-
-    .profile img {
-      width: 250px;
-      height: 250px;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-
-    .profile a {
-      color: #800000;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .profile a:hover {
-      text-decoration: underline;
-    }
-
-    nav {
-      margin-top: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    nav button {
-      padding: 0.5rem 1rem;
-      background: #ddd0c8;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    nav button.active {
-      background: #bfa6a0;
-    }
-
-    section {
-      display: none;
-      margin-top: 1.5rem;
-    }
-
-    section.active {
-      display: block;
-    }
-
-    .links {
-      margin-top: 1rem;
-    }
-
-    .links a {
-      display: inline-block;
-      margin: 0.5rem;
-      color: #800000;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .cv-button {
-      margin-top: 1rem;
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background-color: #800000;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-
-    .publications {
-      margin-top: 1.5rem;
-    }
-
-    .publications li {
-      margin-bottom: 0.8rem;
-    }
-
-    @media (max-width: 768px) {
-      .profile {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .profile img {
-        width: 180px;
-        height: 180px;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conor Dyson | Gravitational physics, University of Birmingham</title>
+  <meta name="description" content="Conor Dyson is a postdoctoral researcher at the University of Birmingham working on relativistic environments, 1PA waveforms and strong-field gravity.">
+  <meta property="og:title" content="Conor Dyson">
+  <meta property="og:description" content="Relativistic environments, 1PA waveforms and strong-field gravity.">
+  <meta name="theme-color" content="#5e1120">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%235e1120'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23f1e4d6' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%231a1013'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <header>
-    <h1>Conor Dyson</h1>
-    <p>PhD Student | Center of Gravity, Niels Bohr Institute</p>
-  </header>
-
-  <div class="container">
-    <div class="profile">
-      <div class="bio">
-        <p>Well/Hej! For some reason you've landed on my personal webpage, I've no idea what could've brought you here but now that you've 
-            arrived I may as well tell you a bit about myself. I'm Conor Dyson, originally
-             from Poulacapple East on the border of Tipperary and Kilkenny, Ireland. I’m now 
-             based in Copenhagen, Denmark, where I'm pursuing my PhD at the Niels Bohr Institute,
-              University of Copenhagen. My interests broadly lie in black hole perturbation theory but 
-              more specifically in applying the self-force formalism to model extreme and intermediary 
-              mass ratio inspirals in the strong gravity regime. Within this formalism I (along with many collaborators) 
-              focus on including the leading order non-linear effects of the self-force in the motion of the small body, 
-              otherwise know as the second order self-force program. Beyond this I also have a keen interest in
-              self consistantly modeling the effects of matter fields such as accretion disk or scalar dark matter canidates
-              on the motion of the small body.</p>
-         <p><strong>Contact:</strong> <a href="mailto:conor.dyson@nbi.ku.dk">conor.dyson@nbi.ku.dk</a></p>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="sleeve">
+    <header class="top">
+      <div class="wrap">
+        <a class="wordmark" href="./">Conor Dyson</a>
+        <nav class="nav" aria-label="Main">
+          <a href="./" aria-current="page">Home</a>
+          <a href="research.html">Research</a>
+          <a href="about.html">About</a>
+          <a href="assets/ConorDyson_CV.pdf">CV</a>
+        </nav>
       </div>
-      <img src="PersonalPhoto1.jpg" alt="Conor Dyson" />
+    </header>
+
+    <div class="hero">
+      <div class="wrap">
+        <figure class="record">
+          <img class="disc" src="assets/spiral-wake.svg" width="1000" height="1000" alt="A spiral density wake in a disc around a spinning black hole, drawn as the grooves of a record">
+          <figcaption>The spiral wake a small body raises in a thin disc around a spinning black hole (a = 0.7), drawn as record grooves. Wake shape from Kerr orbital frequencies, amplitudes schematic. It turns rigidly with the body, as a linear wake should.</figcaption>
+        </figure>
+        <div>
+          <h1 class="name">Conor<br>Dyson</h1>
+          <p class="role">Gravitational physics. Postdoc at the University of Birmingham.</p>
+          <p class="lead">Black hole perturbation theory and self-force: what happens when small bodies spiral into big black holes, and what happens when those black holes sit in gas.</p>
+          <a class="btn" href="mailto:conor.dyson@nbi.ku.dk">Get in touch</a>
+          <ul class="profiles">
+            <li><a href="https://inspirehep.net/authors/2156415">INSPIRE</a></li>
+            <li><a href="https://scholar.google.com/citations?user=2qAjI9gAAAAJ">Google Scholar</a></li>
+            <li><a href="https://github.com/ConorDyson">GitHub</a></li>
+            <li><a href="https://orcid.org/0000-0002-9742-9422">ORCID</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <nav>
-      <button class="tab active" onclick="showTab(event, 'About')">About</button>
-      <button class="tab" onclick="showTab(event, 'research')">Research</button>
-    </nav>
-
-    <section id="About" class="active">
-      <h2>About</h2>
-      <p>
-        As I said above, I'm originally from Poulacapple East, a small village on the border of 
-        Tipperary and Kilkenny in Ireland. I grew up in a rural area, but attended school at St. Kierans 
-        College in Kilkenny where I was fortunate to always have excellent 
-        teachers such as Joey Kavanagh and Carl Lynch. I completed my undergraduate degree at University College 
-        Dublin, where I then went on to attend Homerton College at the University of Cambridge, where I completed 
-        the Part III masters program in the Department of Applied Maths and Theoretical Physics. Following this I then arrived in
-        Copenhagen where I am now based as a PhD student at the Niels Bohr Institute.
-      </p>
-  <p>
-  But this page is supposed to be about me, not my research. Beyond my passion for physics, I love playing and watching rugby. Growing 
-  up on the border of Munster and Leinster, I got to choose my club — and given my hot take 
-  that Prendergast can't tackle and loses his team's games, and Crowley is the clear choice at 10,
-  you can probably guess which route I took. I play for the CSR Nanok rugby team in Christianhavn, Copenhagen. 
-  <br>
-  <img src="CSR.jpg" alt="Conor Dyson"
-       style="max-width: 100%; width: 400px; height: auto; float: right; margin: 10px;" />
-  Joining and playing for this club has honestly been one of the greatest joys of my time in
-  Copenhagen, between the cold dark winter nights training on frozen astroturf to the sunny league games in Aalborg with 
-  a fantastic group of people, it's been a pleasure to be a part of.
-</p>
-      <p>
-        To the annoyance of my roommates in recent years I have also taken up playing 
-        the Anglo concertina, but somehow we've even managed to organise a few trad sessions with people from the Institute! 
-        I think we're still a bit away from a public show though!
-      </p>
-
-      <p>
-        In terms of my other interests outside of physics, I have a passion for art and listening to music. Some of my favorite songs include:
-      </p>
-      <ul>
-        <li>Fontaines D.C. – "Bug"</li>
-        <li>Arctic Monkeys – "Do I Wanna Know?"</li>
-        <li>Lisa O'Neill – "All the Tired Horses"</li>
-        <li>Hak Baker – "Windrush Baby"</li>
-        <li>Radiohead – "All I Need"</li>
-      </ul>
-
-      <p>Also some paintings I've taken a particular liking to over the years include:</p>      
-      <ul>
-        <li>Carl Bloch — <em>In a Roman Osteria</em></li>
-        <li>Jan Matejko — <em>Stańczyk</em></li>
-        <li>Caspar David Friedrich — <em>Wanderer above the Sea of Fog</em></li>
-      </ul>
-    </section>
-
-    <section id="research" class="active">
-      <h2>Research</h2>
-
-      <p>
-        I am a member of the Center of Gravity (formerly the strong gravity group) at the Niels Bohr Institute. My research focuses on gravitational self-force,
-        the primary method for modeling extreme mass ratio inspirals (EMRIs)—systems in which a compact object orbits a much larger
-         supermassive black hole. I study these systems both in vacuum and in the presence of astrophysical environments.
-          The primary goal of my research is to develop precision gravitational waveforms and to understand novel nonlinear effects 
-          in both vacuum and environments in contexts of EMRIs. The overarching science goal of this work is to support the development
-           of waveforms and astrophysical modeling for the upcoming LISA mission, planned for launch in 2035.
-      <p>
-          Below you can find some of my featured publications and links to my profiles on INSPIRE and ADS.
-          For a more comprehensive list of my publications, please visit my <a href="https://inspirehep.net/authors/2156415?ui-citation-summary=true" target="_blank">INSPIRE profile</a>.
-          If you're interested in reading more about the strong group, you can also take a look at the <a href="https://strong-gr.com/" target="_blank">Strong Gravity Group</a> website.
-        </p>
-
-      <div class="links">
-        <a href="https://inspirehep.net/authors/2156415?ui-citation-summary=true" target="_blank">INSPIRE Profile</a>
-        <a href="https://ui.adsabs.harvard.edu/search/p_=0&q=author%3A%22Dyson%2C%20Conor%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank">ADS Profile</a>
-        <a href="https://strong-gr.com/" target="_blank">Strong Gravity Group</a>
-      </div>
-      <a class="cv-button" href="ConorDyson_CV.pdf" target="_blank">Download CV</a>
-      <div class="publications">
-        <h3>Featured Publications</h3>
-        <ul>
-          <li><strong>[1]</strong> C. Dyson, T. Spieksma, R. Brito, M. v.d. Meent and S. Dolan — <em>Environmental effects in extreme mass ratio inspirals: perturbations to the environment in Kerr</em>. Physics Review Letters. [<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.211403">link</a>]</li>
-          <li><strong>[2]</strong> C. Dyson, J. Redondo-Yuste, M. v.d. Meent, V. Cardoso — <em>Relativistic Aerodynamics of Spinning Black Holes</em>. Physics Review D, 2024. [<a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.109.104038">link</a>]</li>
-          <li><strong>[3]</strong> C. Dyson, M. v.d. Meent — <em>Analytic solutions to plunging geodesics in Kerr</em>. Classical and Quantum Gravity, 2023. [<a href="https://iopscience.iop.org/article/10.1088/1361-6382/acf552">link</a>]</li>
+  <main id="main">
+    <section>
+      <div class="wrap">
+        <h2 class="h2">What I work on</h2>
+        <ul class="themes">
+          <li>
+            <h3>Relativistic environments</h3>
+            <p>Massive black holes rarely sit in empty space. I work out how discs and scalar clouds around spinning black holes respond to a small body, the spiral density waves it launches, and the forces that push back on its orbit, all in the Kerr geometry.</p>
+            <p class="refs"><a href="https://arxiv.org/abs/2601.19123">Spiral density waves in Kerr</a>, <a href="https://doi.org/10.1103/PhysRevLett.134.211403">PRL 2025</a></p>
+          </li>
+          <li>
+            <h3>1PA waveforms</h3>
+            <p>LISA will follow extreme-mass-ratio inspirals for tens of thousands of orbits, so their waveforms need first post-adiabatic (1PA) accuracy. I contribute to the second-order self-force programme, and to precision modelling of the environmental effects that enter the waveform at 1PA.</p>
+            <p class="refs"><a href="https://arxiv.org/abs/2611.03888">Kerr metric perturbations for second-order self-force</a>, <a href="https://doi.org/10.1007/s41114-025-00056-1">LISA waveform white paper</a></p>
+          </li>
+          <li>
+            <h3>Strong-field gravity</h3>
+            <p>Exact results close to the horizon: plunging orbits in Kerr, charged particles around magnetic black holes, and how light and waves behave in the strong field.</p>
+            <p class="refs"><a href="https://doi.org/10.1088/1361-6382/acf552">Plunging geodesics</a>, <a href="https://doi.org/10.1103/PhysRevD.108.084064">magnetic black holes</a>, <a href="https://doi.org/10.1103/6h6r-46cd">strong-field lensing</a></p>
+          </li>
         </ul>
       </div>
     </section>
 
-  </div>
+    <section>
+      <div class="wrap bio">
+        <div class="text">
+          <h2 class="h2">Hej, I'm Conor</h2>
+          <p>I'm from Poulacapple East, on the border of Tipperary and Kilkenny. I studied applied and computational mathematics at University College Dublin, did Part III at DAMTP in Cambridge, and then did my PhD in the Center of Gravity (formerly the Strong Gravity group) at the Niels Bohr Institute in Copenhagen, supervised by Vitor Cardoso and Maarten van de Meent.</p>
+          <p>I'm now a postdoc in the School of Physics and Astronomy and the Institute for Gravitational Wave Astronomy at the University of Birmingham. When I'm not doing physics I'm usually at rugby, squeezing an Anglo concertina, or explaining why Crowley should be wearing 10.</p>
+          <p><a href="about.html">More about me</a></p>
+        </div>
+        <img src="assets/conor-duo.jpg" width="900" height="987" alt="Portrait of Conor Dyson">
+      </div>
+    </section>
 
-  <script>
-    function showTab(event, id) {
-      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-      document.querySelectorAll('button.tab').forEach(btn => btn.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-      event.currentTarget.classList.add('active');
-    }
-  </script>
+    <section class="sleeve">
+      <div class="wrap">
+        <h2 class="h2">Selected papers</h2>
+        <ol class="papers" reversed>
+          <li>
+            <span class="yr">2026</span>
+            <div>
+              <p class="t"><a href="https://arxiv.org/abs/2601.19123">Spiral density waves and torque balance in the Kerr geometry</a></p>
+              <p class="au"><b>C. Dyson</b> and D. J. D'Orazio</p>
+              <p class="ref"><a href="https://arxiv.org/abs/2601.19123">arXiv:2601.19123</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="yr">2026</span>
+            <div>
+              <p class="t"><a href="https://arxiv.org/abs/2611.03888">Kerr metric perturbations for second-order self-force theory</a></p>
+              <p class="au">B. Leather, S. D. Upton, P. Bourg, K. O. Cunningham, S. R. Dolan, <b>C. Dyson</b>, Z. Nasipak, N. Nishimura, A. Spiers, M. van de Meent and B. Wardell</p>
+              <p class="ref"><a href="https://arxiv.org/abs/2611.03888">arXiv:2611.03888</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="yr">2025</span>
+            <div>
+              <p class="t"><a href="https://doi.org/10.1103/PhysRevLett.134.211403">Environmental effects in extreme-mass-ratio inspirals: perturbations to the environment in Kerr spacetimes</a></p>
+              <p class="au"><b>C. Dyson</b>, T. F. M. Spieksma, R. Brito, M. van de Meent and S. Dolan</p>
+              <p class="ref">Phys. Rev. Lett. 134, 211403 <a href="https://arxiv.org/abs/2501.09806">arXiv:2501.09806</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="yr">2024</span>
+            <div>
+              <p class="t"><a href="https://doi.org/10.1103/PhysRevD.109.104038">Relativistic aerodynamics of spinning black holes</a></p>
+              <p class="au"><b>C. Dyson</b>, J. Redondo-Yuste, M. van de Meent and V. Cardoso</p>
+              <p class="ref">Phys. Rev. D 109, 104038 <a href="https://arxiv.org/abs/2402.07981">arXiv:2402.07981</a></p>
+            </div>
+          </li>
+        </ol>
+        <p class="more"><a href="research.html#publications">All publications</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span class="big">Conor Dyson</span>
+      <span><a href="mailto:conor.dyson@nbi.ku.dk">conor.dyson@nbi.ku.dk</a></span>
+    </div>
+  </footer>
 </body>
 </html>
