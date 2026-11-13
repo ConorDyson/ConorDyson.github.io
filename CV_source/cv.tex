@@ -1,0 +1,167 @@
+\documentclass{mycv}
+\usepackage[left=0.6in,top=0.6in,right=0.6in,bottom=0.55in]{geometry}
+\usepackage{vwcol}
+\usepackage{cfr-lm}
+\usepackage[official]{eurosym}
+\usepackage[svgnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{graphicx}
+\definecolor{myred}{RGB}{122, 28, 43}   % maroon, matching conordyson.github.io
+\hypersetup{%
+  pdftitle={Conor Dyson: Curriculum Vitae},
+  pdfauthor={Conor Dyson},
+  pdfsubject={CV of Conor Dyson, gravitational physics, University of Birmingham},
+  pdfkeywords={Conor Dyson, black hole perturbation theory, self-force, extreme mass ratio inspirals, relativistic astrophysics, gravitational waves},
+  colorlinks=true,
+  allcolors=myred,
+  pdfborderstyle={/S/U/W 1}
+}
+
+% Thick underline that spans the full column width
+\newcommand{\thickunderlinefull}[2][myred]{%
+  \begingroup
+    #2\par
+    \noindent
+    \color{#1}\rule[0pt]{\linewidth}{2.5pt}%
+  \endgroup
+}
+
+
+\newcommand{\thickunderline}[2][myred]{%
+  \begingroup
+    #2%
+    \par
+    \noindent
+    \color{#1}\rule[0pt]{\widthof{#2}}{2.5pt}%
+  \endgroup
+}
+
+\newcommand{\firstentry}[3]{%
+   \firstentryold{\thickunderlinefull{#1 }}{#2}{#3}
+}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TITLE
+\begin{center}
+    \name{Conor Dyson}
+    \contact
+        {\href{https://conordyson.github.io}{conordyson.github.io}}
+        {\href{mailto:c.dyson.1@bham.ac.uk}{c.dyson.1@bham.ac.uk}}
+        {\href{https://inspirehep.net/authors/2156415?ui-citation-summary=true}{Inspire}}
+\end{center}
+
+Postdoctoral researcher in Cl\'ement Bonnerot's tidal disruption event group at the University of Birmingham. Research in black hole perturbation theory, relativistic astrophysics and self-force theory: post-adiabatic modelling of extreme and intermediate mass ratio inspirals, and the matter environments around black holes and how they shape the motion of bodies in strong-field gravity.
+\vspace{1. em} 
+\begin{content}
+    \firstentry{Current Position}{}{}
+    \entry{\textbf{Postdoctoral Researcher}, School of Physics and Astronomy and Institute for Gravitational Wave Astronomy, University of Birmingham}{\hfill 2026--Present}
+\end{content}
+
+\begin{content}
+    \firstentry{Research Interests\hfill}{}{}
+     \entry{Black Holes, Gravitational Waves, General Relativity, Extreme Mass Ratio Inspirals, Environments, Self-Force, Dark Matter, and Relativistic Fluids}{}
+\end{content}
+
+\begin{content}
+    \altentry{\thickunderlinefull{ \textbf{EDUCATION} } }{}{}
+    \altentry{\hfill PhD}{\textbf{Niels Bohr Institute, University of Copenhagen}, \textit{Motion Through Matter in Curved Space}, Supervisors: Maarten van de Meent \textit{\&} Vitor Cardoso}{\hfill 2022--2026}
+    \entry{\textbf{Massachusetts Institute of Technology}, Visiting Student (1 semester), Host: Scott Hughes}{\hfill 2025}
+    \mainentry{MASt}{\textbf{DAMTP, University of Cambridge}, Applied Mathematics. \textit{Perturbations of a Kerr Black Hole}, Essay supervisor: Harvey Reall}{\hfill 2021--2022}
+    \mainentry{BSc}{\textbf{University College Dublin}, Applied and Computational Mathematics. \textit{Ray Tracing and Neutron Star Visualisation}, Supervisor: Sarp Akcay}{\hfill 2017--2021}
+    \entry{\textbf{University of Edinburgh}, Erasmus Student (1 semester)}{\hfill 2020}
+\end{content}
+
+\begin{content}
+    \firstentry{Awards \& Honours}{}{}
+    \entry{\textbf{Best Scientific Poster}, Black Holes Inside and Out, Strong gravity group.}{\hfill 2024}
+    \entry{\textbf{Ad Astra Scholarship}, University College Dublin}{\hfill 2018-2021}
+    \entry{\textbf{BSc Stage 4 Scholarship}, University College Dublin}{\hfill 2020}
+    \entry{\textbf{Fr. Ciaran Ryan Prize}, University College Dublin}{\hfill 2020}
+    
+\end{content}
+
+\begin{content}
+    \firstentry{Publication Summary}{}{} 
+    \entry{8 publications (incl. 1 PRL), 5 as first author, 232 citations (h-index: 6)}{}
+\end{content}
+
+\begin{content}
+    \firstentry{Invited Seminars}{}{}
+    \entry{Environments Discussion Panel, LISA Waveform Working Group Meeting, \textbf{SISSA, Trieste} (expected)}{\hfill Feb. 2026}
+    \entry{Environments and Fundamental Physics Discussion Panel, Capra Meeting, \textbf{University of Southampton}}{\hfill July 2025} 
+    \entry{Self-Force Seminar, \textbf{University of Southampton}}{\hfill July 2025}
+    \entry{Coffee Talk, \textbf{Institute for Advanced Study}}{\hfill May 2025} 
+    \entry{Coffee Talk, \textbf{Centre for Theoretical Physics, MIT}}{\hfill May 2025} 
+    \entry{ACR group meeting presentation, \textbf{Albert Einstein Institute}}{\hfill Nov. 2023}
+\end{content}
+
+\begin{content}
+    \firstentry{Contributed Talks}{}{}
+    \entry{24th International Conference on General Relativity, \;\;\; \textbf{Glasgow, Scotland}}{\hfill July 2025}
+     \entry{28th Capra Meeting on Radiation Reaction in GR, \textbf{Southampton, England}}{\hfill July 2025}
+      \entry{YITP long-term workshop in Gravity and Cosmology,\;\;\;  \textbf{Kyoto, Japan}}{\hfill Feb. 2024}
+     \entry{26th Capra Meeting on Radiation Reaction in GR, \; \textbf{Copenhagen, Denmark}}{\hfill June 2024}
+\end{content}
+
+\begin{content}
+    \firstentry{Poster Presentations}{}{}
+     \entry{LISA Symposium, \textbf{Dublin, Ireland}}{\hfill July 2025}
+      \entry{Black Holes Inside and Out, \textbf{Copenhagen, Denmark}}{\hfill Aug. 2025}
+\end{content}
+
+\begin{content}
+    \firstentry{Organisation}{}{}
+    \entry{\textbf{Strong Group Weekly Meetings and Seminars}, Copenhagen (Denmark)}{\hfill 2024--2026}
+   \entry{\textbf{Strong Group Retreat}, Fuglsang Manor (Denmark)}{\hfill June 2025}
+    \entry{\textbf{Niels Bohr International Academy Barbecue}, Copenhagen (Denmark)}{\hfill Sept. 2024}
+    \entry{\textbf{Post-linear Meetings, Niels Bohr Institute}, Copenhagen (Denmark)}{\hfill 2024}
+    \entry{\textbf{Capra Conference on Radiation Reaction in General Relativity}, Copenhagen (Denmark)}{\hfill June 2023}
+\end{content}
+
+\begin{content}
+    \firstentry{International Visits}{}{}
+    \entry{\textbf{Massachusetts Institute of Technology} (3 months). \textit{Host: Scott Hughes}}{\hfill 2025}
+    \entry{\textbf{Johns Hopkins University} (1 week). \textit{Host: Daniel D'Orazio}}{\hfill 2025}
+    \entry{\textbf{University of Southampton} (1 week). \textit{Host: Adam Pound}}{\hfill 2025}
+    \entry{\textbf{Institute for Advanced Study} (2 days). \textit{Host: Giovanni Tomaselli}}{\hfill 2025}
+    \entry{\textbf{Yukawa Institute for Theoretical Physics, Kyoto University} (5 weeks)}{\hfill 2024}
+    \entry{\textbf{Albert Einstein Institute} (1 week). \textit{Host: Maarten van de Meent}}{\hfill 2023}
+\end{content}
+
+\begin{content}
+    \firstentry{Collaborations}{}{}
+    \entry{\textbf{Multi-Scale Self-Force Collaboration}}{\hfill 2023--Present}
+    \entry{\textbf{LISA Consortium}, Project Coordinator \& Core Member}{\hfill 2025--Present}
+    \entry{\textbf{Black Hole Perturbation Toolkit}, Contributor}{\hfill 2023--Present}
+\end{content}
+
+\begin{content}
+    \firstentry{Teaching}{}{}
+    \entry{Master student supervision: Manon Johansson (15 ECTS)  }{\hfill 2025/26}
+     \entry{Master student supervision: Ziying Ma (7.5 ECTS ) }{\hfill 2025/26}
+    \entry{TA: Stochastic Inverse Problems (Lecturer: K. Mosegaard)}{\hfill 2023/24}
+    \entry{TA: Computational Science (Lecturer: J. Samsing)}{\hfill 2023}
+    \entry{\textit{(Teaching at the University of Copenhagen)}}{}
+\end{content}
+
+\begin{content}
+    \firstentry{Software}{}{}
+ \entry{Expert in \texttt{Mathematica}. Proficient in \texttt{Python} and \texttt{MATLAB}. Proficient with \texttt{xAct} and the \texttt{Black Hole Perturbation Toolkit}}{}
+
+\end{content}
+
+\begin{content}
+    \firstentry{Service}{}{}
+     \entry{\textbf{LISA Consortium: Project Coordinator}}{}
+     \entry{\textbf{Referee} for \textbf{PRD}, \textbf{PRL}, \textbf{CQG}, and \textbf{SciPost}}{}
+\end{content}
+
+
+\centering
+\vfill
+  \textit{Last updated: \today}
+
+\end{document}
+
